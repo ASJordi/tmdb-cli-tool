@@ -8,8 +8,8 @@
 
 Simple command line interface (CLI) to fetch data from The Movie Database (TMDB) and display it in the terminal using Java.
 
-<img src="src/main/resources/app01.png" alt="Task Tracker CLI" width="400"/> <br>
-<img src="src/main/resources/app02.png" alt="Task Tracker CLI" width="400"/>
+<img src="src/main/resources/app01.png" alt="CLI" width="800"/> <br>
+<img src="src/main/resources/app02.png" alt="CLI" width="800"/>
 
 ## Technologies :gear:
 
