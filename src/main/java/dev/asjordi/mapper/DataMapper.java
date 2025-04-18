@@ -4,13 +4,17 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
+import dev.asjordi.logging.LoggerConfig;
 import dev.asjordi.model.ResponseBody;
 
 import java.net.http.HttpResponse;
 import java.util.Optional;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class DataMapper {
 
+    private static final Logger LOGGER = LoggerConfig.getLogger();
     private final ObjectMapper mapper;
 
     public DataMapper() {
@@ -27,7 +31,7 @@ public class DataMapper {
                 responseBody = mapper.readValue(oResponse.get().body(), ResponseBody.class);
             }
         } catch (JsonProcessingException e) {
-            e.printStackTrace();
+            LOGGER.log(Level.SEVERE, e.getMessage(), e);
         }
 
         return responseBody;
